@@ -9,6 +9,8 @@ allow hal_dms_default hal_dms_hwservice:hwservice_manager add;
 allow hal_dms_default vendor_data_file:dir rw_dir_perms;
 allow hal_dms_default vendor_data_file:file create_file_perms;
 allow hal_dms_default mediacodec:binder call;
+allow hal_dms_default property_socket:sock_file write;
+unix_socket_connect(hal_dms_default, property, init)
 
 binder_call(hal_dms_default, audioserver)
 binder_call(hal_dms_default, hal_audio_default)
