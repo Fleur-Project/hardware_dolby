@@ -101,7 +101,7 @@ android_app_import {
 
 cc_prebuilt_library_shared {
     name: "libdapparamstorage-dolby",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -142,7 +142,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libdapparamstorage",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -183,7 +183,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libdlbpreg",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -228,7 +228,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libstagefright_foundation-dolby",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -271,7 +271,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libdlbvol",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -320,8 +320,58 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libhwdap",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/soundfx/libhwdap.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libaudioutils",
+                "libdapparamstorage",
+                "libhidlbase",
+                "vendor.dolby.hardware.dms@2.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libhwdap.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libaudioutils",
+                "libdapparamstorage",
+                "libhidlbase",
+                "vendor.dolby.hardware.dms@2.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libswdap",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -337,8 +387,6 @@ cc_prebuilt_library_shared {
                 "libaudioutils",
                 "libdapparamstorage",
                 "libhidlbase",
-                "libstagefright_foundation-v33",
-                "libdlbpreg",
                 "vendor.dolby.hardware.dms@2.0",
                 "libc++",
                 "libc",
@@ -357,8 +405,6 @@ cc_prebuilt_library_shared {
                 "libaudioutils",
                 "libdapparamstorage",
                 "libhidlbase",
-                "libstagefright_foundation-v33",
-                "libdlbpreg",
                 "vendor.dolby.hardware.dms@2.0",
                 "libc++",
                 "libc",
@@ -375,7 +421,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libswgamedap",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -425,7 +471,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libswvqe",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -475,7 +521,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "vendor.dolby.hardware.dms@2.0-dolby",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -518,7 +564,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "vendor.dolby.hardware.dms@2.0",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -561,7 +607,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcodec2_soft_ac4dec",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -597,7 +643,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcodec2_soft_ddpdec",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -633,7 +679,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcodec2_soft_dolby",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -664,7 +710,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcodec2_store_dolby",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -693,7 +739,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libdeccfg",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -723,7 +769,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libdlbdsservice",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -737,7 +783,6 @@ cc_prebuilt_library_shared {
                 "libstagefright_foundation-v33",
                 "liblog",
                 "libxml2",
-                "libcrypto",
                 "libdapparamstorage",
                 "libsqlite",
                 "libhidlbase",
@@ -756,7 +801,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "liboem_specific",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -766,6 +811,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/liboem_specific.so",
             ],
             shared_libs: [
+                "libutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -780,7 +826,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "vendor.dolby.hardware.dms@2.0-impl",
-    owner: "sony",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
@@ -810,7 +856,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_binary {
     name: "vendor.dolby.hardware.dms@2.0-service",
-    owner: "sony",
+    owner: "xiaomi",
     target: {
         android_arm64: {
             srcs: [
@@ -842,7 +888,7 @@ cc_prebuilt_binary {
 
 cc_prebuilt_binary {
     name: "vendor.dolby.media.c2@1.0-service",
-    owner: "sony",
+    owner: "xiaomi",
     target: {
         android_arm64: {
             srcs: [
@@ -855,10 +901,8 @@ cc_prebuilt_binary {
                 "libutils",
                 "android.hardware.media.c2@1.0",
                 "android.hardware.media.c2@1.1",
-                "android.hardware.media.c2@1.2",
                 "libcodec2_hidl@1.0",
                 "libcodec2_hidl@1.1",
-                "libcodec2_hidl@1.2",
                 "libcodec2_vndk",
                 "libhidlbase",
                 "libavservices_minijail_vendor",

@@ -131,6 +131,7 @@ PRODUCT_PACKAGES += \
     libdlbpreg \
     libstagefright_foundation-dolby \
     libdlbvol \
+    libhwdap \
     libswdap \
     libswgamedap \
     libswvqe \
