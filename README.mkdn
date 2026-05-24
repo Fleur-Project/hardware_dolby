@@ -1,4 +1,4 @@
-Sony Dolby
+Xiaomi Dolby
 ==============
 
 Getting Started
@@ -43,7 +43,7 @@ The only change done above is changing := symbol to += so that manifest can't be
 
 At the end an example commit to properly implement it in your device tree could be :-
 
-[**1**] https://github.com/Spanish-or-Vanish/android_device_xiaomi_sm8350-common/commit/e2333c94444b2646810cca39926f2df6bb95443c
+[**1 For Dolby Atmos**] https://github.com/Spanish-or-Vanish/android_device_xiaomi_sm8350-common/commit/e2333c94444b2646810cca39926f2df6bb95443c && https://github.com/Spanish-or-Vanish/android_device_xiaomi_sm8350-common/commit/6633f66fb105e0c00440d2909d460ec2918cfb38
 
 [**2 For Spatial Audio**] https://github.com/Spanish-or-Vanish/android_device_xiaomi_sm8350-common/commit/035849721cacf5746bc554407ae2ae7c12edd865
 
