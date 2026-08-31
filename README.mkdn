@@ -65,9 +65,6 @@ At the end an example commit to properly implement it in your device tree could 
  
 **Note: Flags are needed after** [**this**](https://github.com/swiitch-OFF-Lab/hardware_dolby/commit/a29e40ab583f40893552d917c6d4deddac125b01)
 
-**>** [**For OEM Dolby App**](https://github.com/swiitchOFF-miatoll/device_xiaomi_miatoll/commit/7799b7b654dde27862062d5b44d7e58407a0e94b) `TARGET_INCLUDES_OEM_App := true`
-
-**>** **For OSS Dolby App** [**Need this**](https://github.com/swiitch-OFF-Lab/packages_apps_DolbyUI/tree/a) **or** [**Need this**](https://github.com/swiitch-OFF-Lab/packages_apps_DolbyUI/tree/16.0) **and skip/ignore/don't use OEM Dolby App flag**
 
 **>** [**For Dolby Vision**](https://github.com/swiitchOFF-miatoll/device_xiaomi_miatoll/commit/5031c093bfeb5dcd86b45c114c12a4e626fcb48f) `TARGET_INCLUDES_DolbyVision := true`
 
