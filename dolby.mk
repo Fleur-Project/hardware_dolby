@@ -107,10 +107,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += \
     LunarisDolby
 
-# Remove Packages for Dolby Support
-PRODUCT_PACKAGES += \
-    RemovePackagesDolby
-
 # DSP Volume Synchronizer
 PRODUCT_PACKAGES += \
     DSPVolumeSynchronizer
@@ -201,4 +197,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcodec2_hidl_shim.vendor
 endif
-
