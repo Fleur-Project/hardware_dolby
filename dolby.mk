@@ -108,10 +108,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.audio.dolby.ds2.hardbypass=false \
     vendor.audio.dolby.ds2.enabled=false
 
-# Remove Packages for Dolby Support
-PRODUCT_PACKAGES += \
-    RemovePackagesDolby
-
 # DSP Volume Synchronizer
 PRODUCT_PACKAGES += \
     DSPVolumeSynchronizer
@@ -196,4 +192,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcodec2_hidl_shim.vendor
 endif
-
