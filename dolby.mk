@@ -38,14 +38,8 @@ PRODUCT_PACKAGES += \
     vendor.dolby.media.c2.xml
 
 # Configs
-ifeq ($(TARGET_INCLUDES_DolbyVision),true)
 PRODUCT_COPY_FILES += \
     $(DOLBY_PATH)/proprietary/vendor/etc/vision/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
-else
-
-PRODUCT_COPY_FILES += \
-    $(DOLBY_PATH)/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
-endif
 
 PRODUCT_COPY_FILES += \
     $(DOLBY_PATH)/proprietary/vendor/etc/dolby/dax-default-spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default-spatializer.xml \
@@ -111,21 +105,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DSPVolumeSynchronizer
 
-ifeq ($(TARGET_INCLUDES_OEM_App),true)
-# OnePlus DaxUI and daxService
-PRODUCT_PACKAGES += \
-    daxService \
-    DaxUI
-
-# Dolby UI permissions
-PRODUCT_COPY_FILES += \
-    $(DOLBY_PATH)/proprietary/system_ext/etc/permissions/privapp-com.dolby.daxappui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-com.dolby.daxappui.xml \
-    $(DOLBY_PATH)/proprietary/system_ext/etc/permissions/privapp-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-com.dolby.daxservice.xml \
-    $(DOLBY_PATH)/proprietary/system_ext/etc/sysconfig/config-com.dolby.daxappui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/config-com.dolby.daxappui.xml \
-    $(DOLBY_PATH)/proprietary/system_ext/etc/sysconfig/config-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/config-com.dolby.daxservice.xml \
-    $(DOLBY_PATH)/proprietary/system_ext/etc/sysconfig/hiddenapi-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/hiddenapi-com.dolby.daxservice.xml
-endif
-
 # Dolby Proprietary blobs
 PRODUCT_COPY_FILES += \
     $(DOLBY_PATH)/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
@@ -163,7 +142,6 @@ PRODUCT_PACKAGES += \
     libdlbvol \
     vendor.dolby.hardware.dms@2.0-atmos.so
 
-ifeq ($(TARGET_INCLUDES_DolbyVision),true)
 # Dolby vision Proprietary blobs
 PRODUCT_COPY_FILES += \
     $(DOLBY_PATH)/proprietary/vendor/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dolby_vision.cfg \
@@ -196,4 +174,3 @@ PRODUCT_PACKAGES += \
 # Shim
 PRODUCT_PACKAGES += \
     libcodec2_hidl_shim.vendor
-endif
