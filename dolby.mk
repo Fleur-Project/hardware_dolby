@@ -114,7 +114,6 @@ PRODUCT_PACKAGES += \
     libdapparamstorage-dolby \
     libdapparamstorage \
     libstagefright_foundation-dolby \
-    libswdap \
     libswgamedap \
     libswvqe \
     vendor.dolby.hardware.dms@2.0-dolby \
@@ -129,6 +128,14 @@ PRODUCT_PACKAGES += \
     vendor.dolby.hardware.dms@2.0-impl \
     vendor.dolby.hardware.dms@2.0-service \
     vendor.dolby.media.c2@1.0-service
+
+ifeq ($(USE_HWDAP),true)
+PRODUCT_PACKAGES += \
+    libhwdap
+else
+PRODUCT_PACKAGES += \
+    libswdap
+endif
 
 PRODUCT_PACKAGES += \
     libcodec2_aidl-dolby \
