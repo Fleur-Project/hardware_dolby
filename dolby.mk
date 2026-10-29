@@ -82,7 +82,14 @@ PRODUCT_PACKAGES += \
     liboem_specific \
     libswspatializer_ext \
     libdlbvol \
-    libswdap \
     libswgamedap \
     libswspatializer \
     libswvqe
+
+ifeq ($(USE_HWDAP),true)
+PRODUCT_PACKAGES += \
+    libhwdap
+else
+PRODUCT_PACKAGES += \
+    libswdap
+endif
