@@ -79,9 +79,10 @@ PRODUCT_PACKAGES += \
     libdlbdsservice \
     libdlbpreg \
     libspatializerparamstorage \
+    liboem_specific \
     libdlbvol \
     libswdap \
     libswgamedap \
     libswspatializer \
-    libswvqe 
+    libswvqe
 
