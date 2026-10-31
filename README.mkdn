@@ -14,14 +14,9 @@ To enable Dolby AC-3, E-AC-3, E-AC-3 JOC, and AC-4 decoding, make sure your devi
 
 ### 2. Audio Effects
 
-Both software and hardware Dolby Audio Processing (DAP) implementations are supported:
+Hardware Dolby Audio Processing (DAP) implementations are supported:
 
-- `libswdap.so` — Software DAP (default).
 - `libhwdap.so` — Hardware DAP.
-
-Check which DAP implementation is used by inspecting `audio_effects.xml` in your stock ROM dump.
-
-Register the appropriate Dolby effects in your device's `audio_effects.xml`.
 
 ### 3. Build Configuration
 
@@ -30,13 +25,6 @@ Include the Dolby configuration in your device's product makefile.
 **For builds with Software DAP (default):**
 
 ```makefile
-$(call inherit-product, hardware/dolby/dolby.mk)
-```
-
-**For builds with Hardware DAP:**
-
-```makefile
-USE_HWDAP := true
 $(call inherit-product, hardware/dolby/dolby.mk)
 ```
 

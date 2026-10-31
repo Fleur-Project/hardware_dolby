@@ -79,6 +79,7 @@ PRODUCT_PACKAGES += \
     libdeccfg \
     libdlbdsservice \
     libdlbpreg \
+    libhwdap \
     libspatializerparamstorage \
     liboem_specific \
     libswspatializer_ext \
@@ -86,14 +87,6 @@ PRODUCT_PACKAGES += \
     libswgamedap \
     libswspatializer \
     libswvqe
-
-ifeq ($(USE_HWDAP),true)
-PRODUCT_PACKAGES += \
-    libhwdap
-else
-PRODUCT_PACKAGES += \
-    libswdap
-endif
 
 # Dolby vision Proprietary blobs
 PRODUCT_COPY_FILES += \
